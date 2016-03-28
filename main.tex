@@ -1,0 +1,104 @@
+%%% -*- TeX-engine: xetex; Tex-PDF-mode: t -*-
+
+\documentclass[11pt，a4paper，sans]{moderncv}
+
+\input{preambles/packages}
+\input{preambles/styles}
+\input{preambles/fonts}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+% personal data
+\name{王文鑫}{}
+\title{简历}
+\address{清华大学}{电子工程系}{}
+\phone[mobile]{188~1136~9901}
+\email{wenxin.wang94@gmail.com}
+\social[github]{wenxin-wang}
+\photo[64pt][0.4pt]{figs/photo.jpg}
+
+\begin{document}
+\makecvtitle
+
+\section{课程}
+\cvlistdoubleitem{计算机程序设计基础 (C++)}{数据与算法 (C++)}
+\cvlistdoubleitem{计算机网络}{操作系统}
+\cvlistdoubleitem{数据库}{}
+
+\section{经历}
+\subsection{项目}
+
+\cventry{2016.03--}{IPv4/6翻译技术的流量调度}{李星}{清华大学网络中心}{}{
+  升级IPv4/6翻译器（RFC6219）。该项目及其后续是我硕士期间工作的主要部分之一。\newline{}
+  目的：
+  \begin{itemize}
+  \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
+  \item 对各翻译器的选择策略进行中心控制
+  \end{itemize}
+  使用Netfilter和路由实现策略选择和翻译\newline{}
+  语言：C，Shell，Python
+}
+
+\vspace{0.2cm}
+%\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{李星}{清华大学网络中心}{}{}
+
+\cventry{2015.10--2015.12}{Openstack IPv6环境搭建与测试}{李星}{清华大学网络中心}{}{
+  在Openstack Liberty版本中完成了Slaac， DHCPv6 Stateless和DHCPv6Stateful环境的配
+  置和测试。(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})\newline{}
+  上游接受的补丁：
+  \begin{itemize}
+  \item \href{https://review.openstack.org/262976}{add ipv6 options to neutron\_subnet type}
+  \item \href{https://review.openstack.org/261418}{provider/neutron.rb: fix list\_router\_ports}
+  \item \href{https://review.openstack.org/262962}{radvd prefix configuration for DHCPV6 Stateful RA}
+  \end{itemize}
+  语言：Puppet，Python，Ruby
+}
+
+\vspace{0.2cm}
+\cventry{2015.10--2015.08}{新版CERNET2网管系统开发}{张辉}{清华大学网络中心}{}{
+  使用较新的工具，结合目前网管系统缺陷，为教育网提供新的网管系统。系统包含设备管
+  理，以及网络气象图的编辑和呈现等功能。\newline{}
+  贡献代码7000行左右，试运行中。\newline{}
+  语言：Python，Javacript
+}
+
+\vspace{0.5cm}
+\subsection{科研}
+\cventry{2015.04--2015.06}{NFV的一致性更新}{李勇}{清华大学电子系}{}{
+  以Floodlight作为平台，研究SDN环境中，NFV(Middlebox)的快速一致迁移问题。提出了基本思路，改进后的算法相比
+  现有算法在性能和稳定性方面有很大提升。\newline{}
+  作为论文二作，负责算法实现。论文投往CoNEXT2015，算法的效率得到评委肯定。\newline{}
+  语言：Java，Shell
+}
+
+\vspace{0.2cm}
+\cventry{2014.10--2015.01}{利用Docker和OpenBTS搭建虚拟GSM基站池}{}{清华大学电子系}{}{
+  利用Linux容器搭建可动态分配资源的轻量化虚拟GSM基站池。
+  最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\newline{}
+  语言：Shell，C++
+}
+
+\section{编程语言}
+\cvitem{熟悉}{C++， Shell， Python， Javascript}
+\cvitem{了解}{Java}
+
+\section{英语}
+\cvitem{CET-6}{644}
+\cvitem{TOFEL}{110}
+\cvitem{TEPT}{84}
+
+\section{相关能力}
+\cvlistitem{有维护Linux服务器的经验，熟悉网络和虚拟化配置}
+\cvlistitem{英语能力足以胜任日常的工作和科研需求}
+\cvlistitem{
+有较多的项目开发经验，熟悉工程实践，具备与人交流协调的能力。
+项目内容跨度较广，可以快速学习新的知识并投入应用}
+\cvlistitem{了解Linux操作系统平台，熟悉开发和编译工具链，了解Linux网络编程}
+
+\section{时间}
+\cvitem{每周时间}{除去毕设答辩的时间节点（4月20日左右中期答辩，6月15日左右结题答
+  辩）可能需要2-3天准备时间，每周可以工作4-5天}
+\cvitem{实习时长}{至少可以工作7月份，如果时间允许可以继续实习}
+
+\end{document}
