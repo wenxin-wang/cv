@@ -1,13 +1,10 @@
 %%% -*- TeX-engine: xetex; Tex-PDF-mode: t -*-
 
-\documentclass[11pt，a4paper，sans]{moderncv}
+\documentclass[11pt, a4paper, sans]{moderncv}
 
 \input{preambles/packages}
 \input{preambles/styles}
 \input{preambles/fonts}
-
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
 
 % personal data
 \name{王文鑫}{}
@@ -16,10 +13,17 @@
 \phone[mobile]{188~1136~9901}
 \email{wenxin.wang94@gmail.com}
 \social[github]{wenxin-wang}
-\photo[64pt][0.4pt]{figs/photo.jpg}
+% \photo[64pt][0.4pt]{figs/photo.jpg}
 
 \begin{document}
 \makecvtitle
+
+\section{教育}
+\cventry{2012.09--2016.07}{本科（在读）}{清华大学}{}{}{
+  清华大学电子工程系\, 电子信息科学与技术专业
+}
+\cvitem{GPA}{86.94}
+\cvitem{推免}{清华大学网络研究院\, 信息与通信工程专业\, 硕士研究生}
 
 \section{课程}
 \cvlistdoubleitem{计算机程序设计基础 (C++)}{数据与算法 (C++)}
@@ -29,23 +33,22 @@
 \section{经历}
 \subsection{项目}
 
-\cventry{2016.03--}{IPv4/6翻译技术的流量调度}{李星}{清华大学网络中心}{}{
-  升级IPv4/6翻译器（RFC6219）。该项目及后续工作是我研究生阶段的主要课题。\newline{}
-  目的：
+\cventry{2016.03--}{IPv4/6翻译技术的流量调度}{李星}{清华大学网络研究院}{}{
+  升级IPv4/6翻译器（RFC6219）
   \begin{itemize}
   \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
   \item 对各翻译器的选择策略进行中心控制
   \end{itemize}
-  使用Netfilter和路由实现策略选择和翻译\newline{}
+  使用Netfilter和路由实现策略选择和翻译\\
   语言：C，Shell，Python
 }
 
 \vspace{0.3cm}
-%\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{李星}{清华大学网络中心}{}{}
+%\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{李星}{清华大学网络研究院}{}{}
 
-\cventry{2015.10--2015.12}{Openstack IPv6环境搭建与测试}{李星}{清华大学网络中心}{}{
-  在Openstack Liberty版本中完成了Slaac， DHCPv6 Stateless和DHCPv6Stateful环境的配
-  置和测试。(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})\newline{}
+\cventry{2015.10--2015.12}{Openstack IPv6环境搭建与测试}{李星}{清华大学网络研究院}{}{
+  在Openstack Liberty版本中完成了三种IPv6环境的配置和测试。(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})\\
+  (Slaac，DHCPv6 Stateless，DHCPv6Stateful)\\
   上游接受的补丁：
   \begin{itemize}
   \item \href{https://review.openstack.org/262976}{add ipv6 options to neutron\_subnet type}
@@ -56,26 +59,26 @@
 }
 
 \vspace{0.3cm}
-\cventry{2015.08--2015.10}{新版CERNET2网管系统开发}{张辉}{清华大学网络中心}{}{
+\cventry{2015.08--2015.10}{新版CERNET2网管系统开发}{张辉}{清华大学网络研究院}{}{
   结合目前网管系统缺陷，为教育网提供新的网管系统。系统包含设备管
-  理、网络气象图的编辑和呈现等功能。\newline{}
-  贡献代码7000行左右，试运行中。\newline{}
+  理、网络气象图的编辑和呈现等功能。\\
+  贡献代码7000行左右，试运行中。\\
   语言：Python，Javacript
 }
 
-\vspace{0.5cm}
+\newpage{}
 \subsection{科研}
-\cventry{2015.04--2015.06}{NFV的一致性更新}{李勇}{清华大学电子系}{}{
-  以Floodlight作为平台，研究SDN环境中NFV（Middlebox）的快速一致迁移问题。提出了基本思路，改进后的算法相比
-  现有算法在性能和稳定性方面有很大提升。\newline{}
-  作为论文二作，负责算法实现。论文投往CoNEXT2015，算法的效率得到评委肯定。\newline{}
+\cventry{2015.04--2015.06}{NFV的一致性更新}{李勇}{清华大学电子工程系}{}{
+  以Floodlight作为平台，研究SDN环境中NFV的快速一致迁移问题。\\
+  提出了基本思路，改进后的算法相比现有算法在性能和稳定性方面有很大提升。\\
+  作为论文二作，负责算法实现。论文投往CoNEXT2015，算法的效率得到评委肯定。\\
   语言：Java，Shell
 }
 
 \vspace{0.3cm}
-\cventry{2014.10--2015.01}{利用Docker和OpenBTS搭建虚拟GSM基站池}{}{清华大学电子系}{}{
-  利用Linux容器搭建可动态分配资源的轻量化虚拟GSM基站池。
-  最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\newline{}
+\cventry{2014.10--2015.01}{利用Docker和OpenBTS搭建虚拟GSM基站池}{}{清华大学电子工程系}{}{
+  利用Linux容器搭建可动态分配资源的轻量化虚拟GSM基站池。\\
+  最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\\
   语言：Shell，C++
 }
 
@@ -90,11 +93,15 @@
 \cvitem{TEPT}{84}
 
 \section{相关能力}
-\cvitem{}{有维护Linux服务器的经验，熟悉网络和虚拟化配置}
-\cvitem{}{
-有较多的项目开发经验，熟悉工程实践，具备与人交流协调的能力。
-项目内容跨度较广，可以快速学习新的知识并投入应用}
-\cvitem{}{了解Linux操作系统平台，熟悉开发和编译工具链，了解Linux网络编程}
+\cvitem{Linux}{熟悉Linux操作系统平台，使用Linux环境进行日常工作}
+\cvitem{}{熟悉开发和编译工具链，完成（Cross）Linux From Scratch编译和运行}
+\cvitem{}{了解Linux网络编程}
+\vspace{0.3cm}
+\cvitem{运维能力}{熟悉网络和虚拟化配置，使用libvirt运行日常工作和测试环境}
+\cvitem{}{熟悉自动部署，熟悉Ansible和Puppet使用}
+\vspace{0.3cm}
+\cvitem{开发能力}{有较多的项目开发经验，熟悉工程实践，具备与人交流协调的能力}
+\cvitem{}{项目内容跨度较广，可以快速学习新的知识并投入应用}
 
 \section{时间}
 \cvitem{每周时间}{除去毕设答辩的时间节点（4月12日左右中期答辩，6月中旬结题答
