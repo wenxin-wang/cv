@@ -31,23 +31,23 @@
 \section{经历}
 \subsection{项目}
 
-\cventry{2016.03--现在}{\mdseries IPv4/6翻译技术的流量调度}{}{清华大学网络研究院}{}{
+\cventry{2016.03--现在}{\mdseries IPv4/6翻译技术的流量调度}{清华大学网络研究院}{}{}{
   升级IPv4/6翻译器（RFC6219）
   \begin{itemize}
   \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
   \item 对各翻译器的选择策略进行中心控制
   \end{itemize}
-  使用Netfilter和路由实现策略选择和翻译\\
+  % 使用Netfilter和路由实现策略选择和翻译\\
   语言：C，Shell，Python
 }
 
 \vspace{0.3cm}
 %\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{}{清华大学网络研究院}{}{}
 
-\cventry{2015.10--2015.12}{\mdseries Openstack IPv6环境搭建与测试}{}{清华大学网络研究院}{}{
+\cventry{2015.10--2015.12}{\mdseries Openstack IPv6环境搭建与测试}{清华大学网络研究院}{}{}{
   在Openstack Liberty版本中实现了Slaac、DHCPv6 Stateless、DHCPv6Stateful\\
   三种IPv6环境的配置和测试(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})。\\
-  个人提交并被官方合并的补丁：
+  被官方合并的补丁：
   \href{https://review.openstack.org/262976}{\urlblue{262976}}，
   \href{https://review.openstack.org/261418}{\urlblue{261418}}，
   \href{https://review.openstack.org/262962}{\urlblue{262962}}\\
@@ -55,20 +55,21 @@
 }
 
 \vspace{0.3cm}
-\cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{}{清华大学网络研究院}{}{
+\cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{清华大学网络研究院}{}{}{
   为教育网提供易于使用的新版网管系统，贡献代码7000行左右，试运行中。\\
   语言：Python，Javacript
 }
 
 \vspace{0.3cm}
-\cventry{2013.08--2013.10}{\mdseries 2013年第15届清华大学电子设计竞赛官方网站制作}{}{}{}{
-  独立实现前端和后端。网站实现了队伍和赛事数据处理、新闻公告、文件传输和论坛功能，为比赛主办方继续沿用。\\
+\cventry{2013.08--2013.10}{\mdseries 第15届清华大学电子设计大赛官方网站制作}{清华大学电子系科协}{}{}{
+  独立完成网站的制作，功能包含队伍和赛事数据处理、新闻公告、文件传输和论坛，
+  代码在后续赛事中沿用。\\
   语言：Ruby
 }
 
 \newpage{}
 \subsection{科研}
-\cventry{2015.04--2015.06}{\mdseries NFV的一致性更新}{}{清华大学未来网络与通信实验室}{}{
+\cventry{2015.04--2015.06}{\mdseries NFV的一致性更新}{清华大学未来网络与通信实验室}{}{}{
   研究SDN环境中NFV的快速一致迁移问题。\\
   提出了基本思路，改进后的算法相比现有算法在性能和稳定性方面有很大提升。作为论文二作，负责算法实现。\\
   Yujie Liu, \textbf{Wenxin Wang}, Jiaqiang Liu, Yong Li, Haoyu Song, Yue Wang, and Jian
@@ -78,16 +79,17 @@
 }
 
 \vspace{0.3cm}
-\cventry{2014.10--2015.01}{\mdseries 利用Docker和OpenBTS搭建虚拟GSM基站池}{}{网络融合实验室}{}{
-  利用Linux容器搭建可动态分配资源的轻量化虚拟GSM基站池。\\
+\cventry{2014.10--2015.01}{\mdseries 虚拟GSM基站池}{清华
+  大学网络融合实验室}{}{}{
+  利用Docker和OpenBTS搭建可动态分配资源的轻量化虚拟GSM基站池。\\
   最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\\
   语言：Shell，C++
 }
 
 \vspace{0.3cm}
-\cventry{2014.04--2014.06}{\mdseries 虚拟机嵌套文件系统性能分析}{}{清华大学计算机系}{}{
+\cventry{2014.04--2014.06}{\mdseries 虚拟机嵌套文件系统性能分析}{清华大学计算机系}{}{}{
   研究由于宿主机和虚拟机嵌套文件系统导致的读写性能下降问题。\\
-  抓取各层的IO操作，进行各层事件匹配，找到从虚拟机到宿主机的操作映射模式。\\
+  记录各层的IO操作，进行事件匹配，找到从虚拟机到宿主机的操作映射模式。\\
   语言：Shell，Python
 }
 
@@ -100,7 +102,7 @@
 \cvitem{}{熟悉开发和编译工具链，完成（Cross）Linux From Scratch编译和运行}
 \cvitem{}{了解Linux网络编程}
 \vspace{0.3cm}
-\cvitem{运维能力}{熟悉网络和虚拟化配置，使用libvirt运行日常工作和测试环境}
+\cvitem{运维能力}{熟悉网络和虚拟化配置，使用Libvirt运行日常工作和测试环境}
 \cvitem{}{熟悉自动部署，熟悉Ansible和Puppet使用}
 \vspace{0.3cm}
 \cvitem{开发能力}{有较多的项目开发经验，熟悉工程实践，具备与人交流协调的能力}
