@@ -11,3 +11,5 @@ auto/
 *.snm
 *.gz
 *.toc
+*.fls
+*.fdb_latexmk
