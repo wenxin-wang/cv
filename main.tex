@@ -19,7 +19,7 @@
 \makecvtitle
 
 \section{教育}
-\cventry{2012.09\\2016.07}{本科（在读）}{清华大学}{}{}{
+\cventry{2012.09--2016.07}{\mdseries 本科（在读）}{清华大学}{}{}{
   清华大学电子工程系\, 电子信息科学与技术专业
 }
 \cvitem{推免}{清华大学网络研究院\, 信息与通信工程专业\, 硕士研究生}
@@ -27,11 +27,12 @@
 \cvitem{课程}{\minusblue{--} 计算机程序设计基础 (C++)}
 \cvlistdoubleitem{数据与算法 (C++)}{计算机网络}
 \cvlistdoubleitem{操作系统}{数据库}
+\cvitem{TOFEL}{110}
 
 \section{经历}
 \subsection{项目}
 
-\cventry{2016.03\\}{IPv4/6翻译技术的流量调度}{李星}{清华大学网络研究院}{}{
+\cventry{2016.03--现在}{\mdseries IPv4/6翻译技术的流量调度}{}{清华大学网络研究院}{}{
   升级IPv4/6翻译器（RFC6219）
   \begin{itemize}
   \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
@@ -42,56 +43,58 @@
 }
 
 \vspace{0.3cm}
-%\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{李星}{清华大学网络研究院}{}{}
+%\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{}{清华大学网络研究院}{}{}
 
-\cventry{2015.10\\2015.12}{Openstack IPv6环境搭建与测试}{李星}{清华大学网络研究院}{}{
-  在Openstack Liberty版本中完成了三种IPv6环境的配置和测试。(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})\\
-  (Slaac，DHCPv6 Stateless，DHCPv6Stateful)\\
-  上游接受的补丁：
-  \begin{itemize}
-  \item \href{https://review.openstack.org/262976}{add ipv6 options to neutron\_subnet type}
-  \item \href{https://review.openstack.org/261418}{provider/neutron.rb: fix list\_router\_ports}
-  \item \href{https://review.openstack.org/262962}{radvd prefix configuration for DHCPV6 Stateful RA}
-  \end{itemize}
+\cventry{2015.10--2015.12}{\mdseries Openstack IPv6环境搭建与测试}{}{清华大学网络研究院}{}{
+  在Openstack Liberty版本中实现了Slaac、DHCPv6 Stateless、DHCPv6Stateful\\
+  三种IPv6环境的配置和测试(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})。\\
+  个人提交并被官方合并的补丁：
+  \href{https://review.openstack.org/262976}{\urlblue{262976}}，
+  \href{https://review.openstack.org/261418}{\urlblue{261418}}，
+  \href{https://review.openstack.org/262962}{\urlblue{262962}}\\
   语言：Puppet，Python，Ruby
 }
 
 \vspace{0.3cm}
-\cventry{2015.08\\2015.10}{新版CERNET2网管系统开发}{张辉}{清华大学网络研究院}{}{
-  结合目前网管系统缺陷，为教育网提供新的网管系统。系统包含设备管
-  理、网络气象图的编辑和呈现等功能。\\
-  贡献代码7000行左右，试运行中。\\
+\cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{}{清华大学网络研究院}{}{
+  为教育网提供易于使用的新版网管系统，贡献代码7000行左右，试运行中。\\
   语言：Python，Javacript
+}
+
+\vspace{0.3cm}
+\cventry{2013.08--2013.10}{\mdseries 2013年第15届清华大学电子设计竞赛官方网站制作}{}{}{}{
+  独立完成前端和后端的实现。网站包含选手和团队报名、赛事预告、文档下载和选手论坛，为比赛主办方继续沿用。\\
+  语言：Ruby
 }
 
 \newpage{}
 \subsection{科研}
-\cventry{2015.04\\2015.06}{NFV的一致性更新}{李勇}{清华大学电子工程系}{}{
-  以Floodlight作为平台，研究SDN环境中NFV的快速一致迁移问题。\\
+\cventry{2015.04--2015.06}{\mdseries NFV的一致性更新}{}{清华大学未来网络与通信实验室}{}{
+  研究SDN环境中NFV的快速一致迁移问题。\\
   提出了基本思路，改进后的算法相比现有算法在性能和稳定性方面有很大提升。\\
-  作为论文二作，负责算法实现。论文投往CoNEXT2015，算法的效率得到评委肯定。\\
-  语言：Java，Shell
+  语言：Java，C，Shell
 }
 
 \vspace{0.3cm}
-\cventry{2014.10\\2015.01}{利用Docker和OpenBTS搭建虚拟GSM基站池}{}{清华大学电子工程系}{}{
+\cventry{2014.10--2015.01}{\mdseries 利用Docker和OpenBTS搭建虚拟GSM基站池}{}{NiuLab}{}{
   利用Linux容器搭建可动态分配资源的轻量化虚拟GSM基站池。\\
   最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\\
   语言：Shell，C++
 }
 
-\section{编程语言}
-\cvitem{熟悉}{C++， Shell， Python， Javascript}
-\cvitem{了解}{Java}
+\vspace{0.3cm}
+\cventry{2014.04--2014.06}{\mdseries 虚拟机嵌套文件系统性能分析}{}{清华大学计算机系}{}{
+  研究由于宿主机和虚拟机嵌套文件系统导致的读写性能下降问题。\\
+  抓取各层的IO操作，进行各层事件匹配，找到从虚拟机到宿主机的操作映射模式。\\
+  语言：Shell，Python
+}
 
-\section{英语}
-\cvitem{}{英语能力足以胜任日常的工作和科研需求}
-\cvitem{CET-6}{644}
-\cvitem{TOFEL}{110}
-\cvitem{TEPT}{84}
+\section{编程语言}
+\cvitem{精通}{C++，Shell，Python，Javascript}
+\cvitem{熟悉}{Java，Ruby}
 
 \section{相关能力}
-\cvitem{Linux}{熟悉Linux操作系统平台，使用Linux环境进行日常工作}
+\cvitem{Linux}{有4年Linux环境的工作经验}
 \cvitem{}{熟悉开发和编译工具链，完成（Cross）Linux From Scratch编译和运行}
 \cvitem{}{了解Linux网络编程}
 \vspace{0.3cm}
