@@ -6,12 +6,16 @@
 \input{preambles/styles}
 \input{preambles/fonts}
 
+\usepackage{xpatch}% http://ctan.org/pkg/xpatch
+% \xpatchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\xpatchcmd{\cvitem}{\raggedleft\hintstyle{#2}}{\raggedright\hintstyle{#2}}{}{}
+
 % personal data
 \name{王文鑫}{}
 \title{简历}
 \address{清华大学}{电子工程系}{}
 \phone[mobile]{188~1136~9901}
-\email{wenxin.wang94@gmail.com}
+\email{i@wenxinwang.me}
 \social[github]{wenxin-wang}
 % \photo[64pt][0.4pt]{figs/photo.jpg}
 
@@ -19,19 +23,28 @@
 \makecvtitle
 
 \section{教育}
-\cventry{2012.09--2016.07}{\mdseries 本科（在读）}{清华大学}{}{}{
-  清华大学电子工程系\, 电子信息科学与技术专业
-}
-\cvitem{推免}{清华大学网络研究院\, 信息与通信工程专业\, 硕士研究生}
+\cventry{2012.09--2016.07}{\mdseries 电子工程系学士}{清华大学}{}{电子信息科学与技术专业}{}
+\cventry{2016.09--}{\mdseries 网络研究院硕士}{清华大学}{}{信息与通信工程专业}{}
 
 \cvitem{课程}{计算机程序设计基础 (C++)，数据与算法 (C++)}
-\cvitem{}{计算机网络，操作系统，数据库}
+\cvitem{}{计算机网络，操作系统，数据库，模式识别}
 \cvitem{TOFEL}{110}
 
 \section{经历}
 \subsection{项目}
 
-\cventry{2016.03--现在}{\mdseries IPv4/6翻译技术的流量调度}{清华大学网络研究院}{}{}{
+\cventry{2017.07--}{\mdseries 可靠文件传输协议开放}{快手}{}{}{
+  参与设计比TCP传输更为可靠的文件传输协议，合作实现协议、整合线上系统\\
+  语言：C++，Java，Shell
+}
+
+\cventry{2016.04--2016.07}{\mdseries 高性能分布式存储系统调研}{京东}{}{}{
+  调研和整理Apache Kudu的存储实现细节，以及Alluxio、Apache Spark等基本的工作流程
+  、储存读取方式和作为缓存的使用方法\\
+  语言：C++，Java
+}
+
+\cventry{2016.03--2016.06}{\mdseries IPv4/6翻译技术的流量调度}{清华大学网络研究院}{}{}{
   升级IPv4/6翻译器（RFC6219）
   \begin{itemize}
   \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
@@ -41,7 +54,6 @@
   语言：C，Shell，Python
 }
 
-\vspace{0.3cm}
 %\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{}{清华大学网络研究院}{}{}
 
 \cventry{2015.10--2015.12}{\mdseries Openstack IPv6环境搭建与测试}{清华大学网络研究院}{}{}{
@@ -54,57 +66,48 @@
   语言：Puppet，Python，Ruby
 }
 
-\vspace{0.3cm}
-\cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{清华大学网络研究院}{}{}{
-  为教育网提供易于使用的新版网管系统，贡献代码7000行左右，试运行中。\\
-  语言：Python，Javacript
-}
+% \cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{清华大学网络研究院}{}{}{
+%   为教育网提供易于使用的新版网管系统，贡献代码7000行左右，试运行中。\\
+%   语言：Python，Javacript
+% }
 
-\vspace{0.3cm}
-\cventry{2013.08--2013.10}{\mdseries 第15届清华大学电子设计大赛官方网站制作}{清华大学电子系科协}{}{}{
-  独立完成网站的制作，功能包含队伍和赛事数据处理、新闻公告、文件传输和论坛，
-  代码在后续赛事中沿用。\\
-  语言：Ruby
-}
+% \cventry{2013.08--2013.10}{\mdseries 第15届清华大学电子设计大赛官方网站制作}{清华大学电子系科协}{}{}{
+%   独立完成网站的制作，功能包含队伍和赛事数据处理、新闻公告、文件传输和论坛，
+%   代码在后续赛事中沿用。\\
+%   语言：Ruby
+% }
 
-\newpage{}
 \subsection{科研}
 \cventry{2015.04--2015.06}{\mdseries NFV的一致性更新}{清华大学未来网络与通信实验室}{}{}{
-  研究SDN环境中NFV的快速一致迁移问题。\\
-  提出了基本思路，改进后的算法相比现有算法在性能和稳定性方面有很大提升。作为论文二作，负责算法实现。\\
-  Yujie Liu, \textbf{Wenxin Wang}, Jiaqiang Liu, Yong Li, Haoyu Song, Yue Wang, and Jian
-  Yuan, \textit{Consistent State Updates for Virtualized Network Function Migration},
-  IEEE Transactions on Services Computing (under review).\\
+  研究SDN环境中NFV的快速一致迁移问题。提出了基本思路，改进后的算法相比现有算法在性能和稳定性方面有很大提升。\\
+  W. Wang, Y. Liu, Y. Li, H. Song, Y. Wang and J. Yuan, \textit{Consistent State
+    Updates for Virtualized Network Function Migration}, in IEEE Transactions on
+  Services Computing, vol. PP, no. 99, pp. 1-1. \\
   语言：Java，C，Shell
 }
 
-\vspace{0.3cm}
-\cventry{2014.10--2015.01}{\mdseries 虚拟GSM基站池}{清华
-  大学网络融合实验室}{}{}{
-  利用Docker和OpenBTS搭建可动态分配资源的轻量化虚拟GSM基站池。\\
-  最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\\
-  语言：Shell，C++
-}
+%\vspace{0.3cm}
+%\cventry{2014.10--2015.01}{\mdseries 虚拟GSM基站池}{清华
+%  大学网络融合实验室}{}{}{
+%  利用Docker和OpenBTS搭建可动态分配资源的轻量化虚拟GSM基站池。\\
+%  最终实现两个基站同时运行于一台宿主机，以及核心网与基站分离的原型。\\
+%  语言：Shell，C++
+%}
 
-\vspace{0.3cm}
-\cventry{2014.04--2014.06}{\mdseries 虚拟机嵌套文件系统性能分析}{清华大学计算机系}{}{}{
-  研究由于宿主机和虚拟机嵌套文件系统导致的读写性能下降问题。\\
-  记录各层的IO操作，进行事件匹配，找到从虚拟机到宿主机的操作映射模式。\\
-  语言：Shell，Python
-}
+%\vspace{0.3cm}
+%\cventry{2014.04--2014.06}{\mdseries 虚拟机嵌套文件系统性能分析}{清华大学计算机系}{}{}{
+%  研究由于宿主机和虚拟机嵌套文件系统导致的读写性能下降问题。\\
+%  记录各层的IO操作，进行事件匹配，找到从虚拟机到宿主机的操作映射模式。\\
+%  语言：Shell，Python
+%}
 
 \section{编程语言}
-\cvitem{精通}{Shell，C/C++，Python，Javascript}
-\cvitem{熟悉}{Java，Ruby}
+\cvitem{日常使用}{Shell，C/C++，Python，Javascript}
 
 \section{相关能力}
-\cvitem{Linux}{4年（deb、rpm系）Linux环境的工作经验}
-\cvitem{}{熟悉开发和编译工具链，完成（Cross）Linux From Scratch编译和运行}
-\cvitem{}{了解Linux网络编程}
-\vspace{0.3cm}
-\cvitem{运维能力}{熟悉网络和虚拟化配置，使用Libvirt运行日常工作和测试环境}
-\cvitem{}{熟悉自动部署，熟悉Ansible和Puppet使用}
-\vspace{0.3cm}
+\cvitem{Linux}{5年（deb、rpm系）Linux环境的工作经验，熟悉开发和编译工具链}
+\cvitem{运维能力}{熟悉网络和虚拟化配置，使用Libvirt和LXC运行日常工作和测试环境}
+%\cvitem{}{熟悉自动部署，熟悉Ansible和Puppet使用}
 \cvitem{开发能力}{有较多的项目开发经验，熟悉工程实践，具备与人交流协调的能力}
 \cvitem{}{项目内容跨度较广，可以快速学习新的知识并投入应用}
 
