@@ -1,0 +1,127 @@
+%%% -*- TeX-engine: xetex; Tex-PDF-mode: t -*-
+
+\documentclass[11pt, a4paper, sans]{moderncv}
+
+\input{preambles/packages}
+\input{preambles/styles}
+\input{preambles/fonts}
+
+\usepackage{xpatch}% http://ctan.org/pkg/xpatch
+% \xpatchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\xpatchcmd{\cvitem}{\raggedleft\hintstyle{#2}}{\raggedright\hintstyle{#2}}{}{}
+
+% personal data
+\name{Wenxin Wang}{}
+\title{Resume}
+\address{Tsinghua University}{Department of Electronics Engineering}{}
+\phone[mobile]{188~1136~9901}
+\email{i@wenxinwang.me}
+\social[github]{wenxin-wang}
+% \photo[64pt][0.4pt]{figs/photo.jpg}
+
+\begin{document}
+\makecvtitle
+
+\section{Education}
+\cventry{2012.09--2016.07}{\mdseries Undergraduate, Department of Electronics
+  Engineering}{Tsinghua University}{}{}{}
+\cventry{2016.09--}{\mdseries Graduate, School of Networking}{Tsinghua Univerisity}{}{}{}
+
+\cvitem{Courses}{Computer Program Design (C++), Data Structure and Algorithms (C++)}
+\cvitem{}{Computer Network, Operating System, Database, Pattern Recognition}
+\cvitem{TOFEL}{110}
+
+\section{Experiences}
+\subsection{Internship and Projects}
+
+\cventry{2017.07--2018.05}{\mdseries Reliable Upload Protocol}{Kuaishou}{}{}{
+  Design and implementation of a video file upload protocol that works reliably under
+  significant packet loss and delay, evaluated in A/B tests. \\
+  Programming Languages: C++, Java, Shell
+}
+
+\cventry{2016.04--2016.07}{\mdseries Study of the Implementation of Apache Kudu's
+Storage System}{Jingdong}{}{}{
+  Study the details of the storage system of Apache Kudu, along with cache
+  systems such as Alluxio and Apache Spark, and their potential usage together with
+  Apache Kudu\\
+  Programming Languages: C++, Java
+}
+
+\cventry{2016.03--2016.06}{\mdseries Traffic Engineering with IPv4/6
+  translation}{School of Networking, Tsinghua}{}{}{
+  Upgrade our kernel-based IPv4/6 translator（RFC6219）, to support
+  \begin{itemize}
+  \item Fine-grained selection of the translation scheme and link for each flow
+  \item Centralized control of each translator's traffic engineering function
+  \end{itemize}
+  % 使用Netfilter和路由实现策略选择和翻译\\
+  Programming Languages: C, Shell, Python
+}
+
+%\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{}{清华大学网络研究院}{}{}
+
+\cventry{2015.10--2015.12}{\mdseries Evaluation of Openstack's IPv6
+  Functions}{School of Networking, Tsinghua}{}{}{
+  Evaluation of common schemes of IPv6 address configuration (Slaac, DHCPv6
+  Stateless, DHCPv6 Stateful) in Openstack Liberty\\
+  (\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})。\\
+  Patches contributed to upstream：
+  \href{https://review.openstack.org/262976}{\urlblue{262976}}, 
+  \href{https://review.openstack.org/261418}{\urlblue{261418}}, 
+  \href{https://review.openstack.org/262962}{\urlblue{262962}}\\
+  Programming Languages: Puppet, Python, Ruby
+}
+
+% \cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{清华大学网络研究院}{}{}{
+%   为教育网提供易于使用的新版网管系统, 贡献代码7000行左右, 试运行中。\\
+%   语言：Python, Javacript
+% }
+
+% \cventry{2013.08--2013.10}{\mdseries 第15届清华大学电子设计大赛官方网站制作}{清华大学电子系科协}{}{}{
+%   独立完成网站的制作, 功能包含队伍和赛事数据处理、新闻公告、文件传输和论坛, 
+%   代码在后续赛事中沿用。\\
+%   语言：Ruby
+% }
+
+\subsection{Research}
+\cventry{2015.04--2017.10}{\mdseries Consistent Migration of NFV}{Future
+  Internet Lab, Tsinghua}{}{}{
+  Design and Evaluation of a fast and stable algorithm for consitent NFV migration.\\
+  W. Wang, Y. Liu, Y. Li, H. Song, Y. Wang and J. Yuan, \textit{Consistent State
+    Updates for Virtualized Network Function Migration}, in IEEE Transactions on
+  Services Computing, vol. PP, no. 99, pp. 1-1. \\
+  Programming Languages: Java, C, Shell
+}
+
+%\vspace{0.3cm}
+%\cventry{2014.10--2015.01}{\mdseries 虚拟GSM基站池}{清华
+%  大学网络融合实验室}{}{}{
+%  利用Docker和OpenBTS搭建可动态分配资源的轻量化虚拟GSM基站池。\\
+%  最终实现两个基站同时运行于一台宿主机, 以及核心网与基站分离的原型。\\
+%  语言：Shell, C++
+%}
+
+%\vspace{0.3cm}
+%\cventry{2014.04--2014.06}{\mdseries 虚拟机嵌套文件系统性能分析}{清华大学计算机系}{}{}{
+%  研究由于宿主机和虚拟机嵌套文件系统导致的读写性能下降问题。\\
+%  记录各层的IO操作, 进行事件匹配, 找到从虚拟机到宿主机的操作映射模式。\\
+%  语言：Shell, Python
+%}
+
+\section{Programming Language}
+\cvitem{Daily Usage}{Shell, C/C++, Python, Javascript}
+
+\section{Relevant Skills}
+\cvitem{Linux}{7-year working experience with Linux and compilation toolchains}
+\cvitem{DevOps}{Daily usage of networking and virtualization tools
+  (Libvirt, LXC, Docker)}
+\cvitem{}{Ansible and Saltstack for testing and production}
+\cvitem{Engineering}{Communication skills and teamwork experience, Always ready to learn}
+
+% \section{时间}
+% \cvitem{每周时间}{除去毕设答辩的时间节点（4月12日左右中期答辩, 6月中旬结题答
+%   辩）可能需要2-3天准备时间, 每周可以工作4-5天}
+% \cvitem{实习时长}{4月可以开始工作, 至少工作至7月, 如果时间允许可以继续实习}
+
+\end{document}

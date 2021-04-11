@@ -12,8 +12,7 @@
 
 % personal data
 \name{王文鑫}{}
-\title{简历}
-\address{清华大学}{电子工程系}{}
+\address{快手}{音视频传输算法组}{}
 \phone[mobile]{188~1136~9901}
 \email{i@wenxinwang.me}
 \social[github]{wenxin-wang}
@@ -22,37 +21,90 @@
 \begin{document}
 \makecvtitle
 
-\section{教育}
+\vspace*{-1cm}% Insert needed vertical retraction
+
+\section{教育经历}
 \cventry{2012.09--2016.07}{\mdseries 电子工程系学士}{清华大学}{}{电子信息科学与技术专业}{}
-\cventry{2016.09--}{\mdseries 网络研究院硕士}{清华大学}{}{信息与通信工程专业}{}
+\cventry{2016.09--2019.07}{\mdseries 网络研究院硕士}{清华大学}{}{信息与通信工程专业}{}
 
 \cvitem{课程}{计算机程序设计基础 (C++)，数据与算法 (C++)}
 \cvitem{}{计算机网络，操作系统，数据库，模式识别}
 \cvitem{TOFEL}{110}
 
-\section{经历}
-\subsection{项目}
+\section{工作经历}
 
-\cventry{2017.07--2018.08}{\mdseries 可靠文件传输协议开发}{快手}{}{}{
-  参与设计弱网环境下的大吞吐量文件传输协议，合作实现协议、整合线上系统\\
-  语言：C++，Java，Shell
-}
-
-\cventry{2016.04--2016.07}{\mdseries 高性能分布式存储系统调研}{京东}{}{}{
-  调研和整理Apache Kudu的存储实现细节，以及Alluxio、Apache Spark等基本的工作流程
-  、储存读取方式和作为缓存的使用方法\\
-  语言：C++，Java
-}
-
-\cventry{2016.03--2016.06}{\mdseries IPv4/6翻译技术的流量调度}{清华大学网络研究院}{}{}{
-  升级IPv4/6翻译器（RFC6219），基于Linux内核
+\cventry{2020.11--2021.04}{\mdseries 海外拉流体验优化}{快手}{}{}{
   \begin{itemize}
-  \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
-  \item 对各翻译器的选择策略进行中心控制
+  \item 设计实现基于私有拉流协议的服务器/客户端 SDK，结合业务特点进行丢帧策略改进、连接复用等优化
+  \item 32 核服务器，负载 50\% 时可以承载万兆流量
+  \item 开播失败率降低 10\%，卡顿率降低 20\%
   \end{itemize}
-  % 使用Netfilter和路由实现策略选择和翻译\\
+  语言：C++，Shell
+}
+
+\cventry{2019.10--2020.11}{\mdseries 基于 P2P 的 RTC 体验优化}{快手}{}{}{
+  \begin{itemize}
+  \item NAT 穿透，P2P RTC 穿透率 60\%，P2P 直播 80\%
+  \item P2P RTC 研发，成本节约 44\%，延迟降低 2\%
+  \end{itemize}
+  语言：C++，Shell，Java
+}
+
+\section{项目经历}
+
+\cventry{2018.12--2019.02}{\mdseries IPv4/IPv6 翻译系统（RFC6219）研发}{清华大学网络研究院}{}{}{
+  \begin{itemize}
+  \item 内核态的数据包翻译模块，基于 Linux 虚拟设备和 netfilter，支持 x86/arm
+  \item 使用 exabgp 开发基于 BGP 协议的翻译器控制信令
+  \end{itemize}
   语言：C，Shell，Python
 }
+
+\cventry{2018.11--2019.01}{\mdseries 基于 Flowlabel 的 IPv6 流量工程}{清华大学网络研究院}{}{}{
+  \begin{itemize}
+  \item 利用 IPv6 的 Flowlabel 域为数据包增加标记，在网络中依据此标记进行转发
+  \item 使用 Linux eBPF（xdp 和 lwt tunnel）处理和转发数据帧
+  \end{itemize}
+  语言：C，Shell, eBPF
+}
+
+\cventry{2018.10--2018.12}{\mdseries IPv4/IPv6 翻译场景下用户接入网的无感知认证系统}{清华大学网络研究院}{}{}{
+  \begin{itemize}
+  \item 利用校园网邮箱和设备 MAC 地址，在入网时进行设备认证
+  \item 利用 Linux conntrack 模块进行请求溯源
+  \item 基于 Systemd 和 Docker 的服务管理
+  \end{itemize}
+  语言：C，Shell，Ansible
+}
+
+\cventry{2018.10--2015.12}{\mdseries 树莓派网络探针系统}{清华大学网络研究院}{}{}{
+  \begin{itemize}
+  \item 部署在全国各高校 CERNET 节点，采集到各个运营商的网络情况
+  \item 自动化批量生产，使用只读文件系统延长节点寿命，可远程控制和更新
+  \end{itemize}
+  语言：Shell，Python，Saltstack
+}
+
+% \cventry{2017.07--2018.05}{\mdseries 可靠文件传输协议开发}{快手}{}{}{
+%   设计与实现弱网环境下的大吞吐量文件传输协议，用于短视频上传，在线
+%   上系统进行灰度测试\\
+%   语言：C++，Java，Shell }
+
+% \cventry{2016.04--2016.07}{\mdseries 高性能分布式存储系统调研}{京东}{}{}{
+%   调研和整理Apache Kudu的存储实现细节，以及Alluxio、Apache Spark等基本的工作流程
+%   、储存读取方式和作为缓存的使用方法\\
+%   语言：C++，Java
+% }
+
+% \cventry{2016.03--2016.06}{\mdseries IPv4/6翻译技术的流量调度}{清华大学网络研究院}{}{}{
+%   升级IPv4/6翻译器（RFC6219），基于Linux内核
+%   \begin{itemize}
+%   \item 允许翻译器细粒度地选择各个流的翻译模式和上行出口
+%   \item 对各翻译器的选择策略进行中心控制
+%   \end{itemize}
+%   % 使用Netfilter和路由实现策略选择和翻译\\
+%   语言：C，Shell，Python
+% }
 
 %\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{}{清华大学网络研究院}{}{}
 
@@ -77,9 +129,9 @@
 %   语言：Ruby
 % }
 
-\subsection{科研}
+\section{科研经历}
 \cventry{2015.04--2017.10}{\mdseries NFV的一致性更新（一作）}{清华大学未来网络与通信实验室}{}{}{
-  研究SDN环境中NFV的快速一致迁移问题。改进后的算法相比现有算法在性能和稳定性方面有很大提升。\\
+  研究SDN环境中NFV的快速一致迁移问题。改进后的算法相比现有算法在性能提升 3 倍。\\
   W. Wang, Y. Liu, Y. Li, H. Song, Y. Wang and J. Yuan, \textit{Consistent State
     Updates for Virtualized Network Function Migration}, in IEEE Transactions on
   Services Computing, vol. PP, no. 99, pp. 1-1. \\
@@ -101,15 +153,12 @@
 %  语言：Shell，Python
 %}
 
-\section{编程语言}
-\cvitem{日常使用}{Shell，C/C++，Python，Javascript}
-
-\section{相关能力}
-\cvitem{Linux}{7年（deb、rpm系）Linux环境的工作经验，熟悉开发和编译工具链}
-\cvitem{运维能力}{熟悉网络和虚拟化配置，使用Libvirt和LXC运行日常工作和测试环境}
-\cvitem{}{熟悉自动部署，熟悉Ansible和Saltstack使用}
-\cvitem{开发能力}{有较多的项目开发经验，熟悉工程实践，具备与人交流协调的能力}
-\cvitem{}{项目内容跨度较广，可以快速学习新的知识并投入应用}
+% \section{相关能力}
+% \cvitem{Linux}{7年（deb、rpm系）Linux环境的工作经验，熟悉开发和编译工具链}
+% \cvitem{运维能力}{熟悉网络和虚拟化配置，使用Libvirt和LXC运行日常工作和测试环境}
+% \cvitem{}{熟悉自动部署，熟悉Ansible和Saltstack使用}
+% \cvitem{开发能力}{有较多的项目开发经验，有良好的沟通协调能力及团队合作精神}
+% \cvitem{}{项目内容跨度较广，可以快速学习新的知识并投入应用}
 
 % \section{时间}
 % \cvitem{每周时间}{除去毕设答辩的时间节点（4月12日左右中期答辩，6月中旬结题答
