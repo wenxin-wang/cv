@@ -29,60 +29,73 @@
 
 \cvitem{课程}{计算机程序设计基础 (C++)，数据与算法 (C++)}
 \cvitem{}{计算机网络，操作系统，数据库，模式识别}
-\cvitem{TOFEL}{110}
+\cvitem{外语能力}{托福 110}
 
 \section{工作经历}
 
 \cventry{2020.11--2021.04}{\mdseries 海外拉流体验优化}{快手}{}{}{
   \begin{itemize}
-  \item 设计实现基于私有拉流协议的服务器/客户端 SDK，结合业务特点进行丢帧策略改进、连接复用等优化
-  \item 32 核服务器，负载 50\% 时可以承载万兆流量
-  \item 开播失败率降低 10\%，卡顿率降低 20\%
+  \item 设计实现私有拉流协议，结合业务特点进行全链路优化
+  \item 服务器 SDK：支持自适应丢帧策略、多码率预拉取；32 核单机承载万兆流量
+  \item 客户端 SDK：支持连接复用、UDP/TCP 切换
+  \item 开播失败率降低 9\%，卡顿率降低 18\%
   \end{itemize}
   语言：C++，Shell
 }
 
-\cventry{2019.10--2020.11}{\mdseries 基于 P2P 的 RTC 体验优化}{快手}{}{}{
+\cventry{2019.09--2020.03}{\mdseries 基于点对点通信的实时通话体验优化}{快手}{}{}{
   \begin{itemize}
-  \item NAT 穿透，P2P RTC 穿透率 60\%，P2P 直播 80\%
-  \item P2P RTC 研发，成本节约 44\%，延迟降低 2\%
+  \item PK/连麦等双人通话业务，在 MCU 转发通路之外，增加点对点通路
+  \item 设计实现自适应算法，在两条通路间择优切换
+  \item 带宽成本节约 44\%，延迟降低 2\%
   \end{itemize}
-  语言：C++，Shell，Java
+  语言：C++，Java
+}
+
+\cventry{2019.12--2020.11}{\mdseries NAT 穿透 SDK 研发}{快手}{}{}{
+  \begin{itemize}
+  \item 在用户间建立点对点的 UDP 连接，支撑 P2P 通话（双人）/直播（多人）业务
+  \item 基于 STUN 协议，使用 IPv6、UPnP、端口预测和端口碰撞等方案提升穿透率
+  \item P2P 通话业务平均穿透率 58\%，P2P 直播业务平均穿透率 63\%
+  \end{itemize}
+  语言：C++，Shell
+}
+
+\cventry{2019.07--2019.08}{\mdseries 短视频作品发布成功率优化}{快手}{}{}{
+  \begin{itemize}
+  \item 单次上传失败后，使用备选服务器列表自动 fallback；发布成功率提升 2\%
+  \item 调研 iOS 后台 HTTP 上传方案
+  \end{itemize}
+  语言：C++，Java, Objective-C
 }
 
 \section{项目经历}
 
-\cventry{2018.12--2019.02}{\mdseries IPv4/IPv6 翻译系统（RFC6219）研发}{清华大学网络研究院}{}{}{
+\cventry{2018.10--2019.02}{\mdseries IPv4/IPv6 翻译系统研发}{}{}{}{
   \begin{itemize}
+  \item 基于 RFC6219 设计实现翻译系统，在清华大学等高校部署
   \item 内核态的数据包翻译模块，基于 Linux 虚拟设备和 netfilter，支持 x86/arm
   \item 使用 exabgp 开发基于 BGP 协议的翻译器控制信令
+  \item 研发基于 IPv6 Flowlabel 的流量调度机制，使用 Linux eBPF 处理和转发数据帧
   \end{itemize}
-  语言：C，Shell，Python
+  语言：C，Shell，Python, eBPF
 }
 
-\cventry{2018.11--2019.01}{\mdseries 基于 Flowlabel 的 IPv6 流量工程}{清华大学网络研究院}{}{}{
+\cventry{2018.10--2018.12}{\mdseries 中国教育网网络质量探针系统}{}{}{}{
   \begin{itemize}
-  \item 利用 IPv6 的 Flowlabel 域为数据包增加标记，在网络中依据此标记进行转发
-  \item 使用 Linux eBPF（xdp 和 lwt tunnel）处理和转发数据帧
+  \item 部署在全国各高校 CERNET 节点，采集到各个运营商的网络情况
+  \item 自动化批量生产，使用只读文件系统延长节点寿命，可远程控制和更新
   \end{itemize}
-  语言：C，Shell, eBPF
+  语言：Shell，Python，Saltstack
 }
 
-\cventry{2018.10--2018.12}{\mdseries IPv4/IPv6 翻译场景下用户接入网的无感知认证系统}{清华大学网络研究院}{}{}{
+\cventry{2018.10--2018.12}{\mdseries IPv4/IPv6 翻译场景下用户接入网的无感知认证系统}{}{}{}{
   \begin{itemize}
   \item 利用校园网邮箱和设备 MAC 地址，在入网时进行设备认证
   \item 利用 Linux conntrack 模块进行请求溯源
   \item 基于 Systemd 和 Docker 的服务管理
   \end{itemize}
   语言：C，Shell，Ansible
-}
-
-\cventry{2018.10--2015.12}{\mdseries 树莓派网络探针系统}{清华大学网络研究院}{}{}{
-  \begin{itemize}
-  \item 部署在全国各高校 CERNET 节点，采集到各个运营商的网络情况
-  \item 自动化批量生产，使用只读文件系统延长节点寿命，可远程控制和更新
-  \end{itemize}
-  语言：Shell，Python，Saltstack
 }
 
 % \cventry{2017.07--2018.05}{\mdseries 可靠文件传输协议开发}{快手}{}{}{
@@ -108,15 +121,15 @@
 
 %\cventry{2016.01--2016.02}{使用应用层代理解决老旧网站的IPv6访问}{}{清华大学网络研究院}{}{}
 
-\cventry{2015.10--2015.12}{\mdseries Openstack IPv6环境搭建与测试}{清华大学网络研究院}{}{}{
-  在Openstack Liberty版本中实现了Slaac、DHCPv6 Stateless、DHCPv6Stateful\\
-  三种IPv6环境的配置和测试(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})。\\
-  被官方合并的补丁：
-  \href{https://review.openstack.org/262976}{\urlblue{262976}}，
-  \href{https://review.openstack.org/261418}{\urlblue{261418}}，
-  \href{https://review.openstack.org/262962}{\urlblue{262962}}\\
-  语言：Puppet，Python，Ruby
-}
+% \cventry{2015.10--2015.12}{\mdseries Openstack IPv6环境搭建与测试}{清华大学网络研究院}{}{}{
+%   在Openstack Liberty版本中实现了Slaac、DHCPv6 Stateless、DHCPv6Stateful\\
+%   三种IPv6环境的配置和测试(\href{https://github.com/wenxin-wang/puppet-phystack}{\urlblue{Github}})。\\
+%   被官方合并的补丁：
+%   \href{https://review.openstack.org/262976}{\urlblue{262976}}，
+%   \href{https://review.openstack.org/261418}{\urlblue{261418}}，
+%   \href{https://review.openstack.org/262962}{\urlblue{262962}}\\
+%   语言：Puppet，Python，Ruby
+% }
 
 % \cventry{2015.08--2015.10}{\mdseries 新版CERNET2网管系统开发}{清华大学网络研究院}{}{}{
 %   为教育网提供易于使用的新版网管系统，贡献代码7000行左右，试运行中。\\
@@ -129,13 +142,12 @@
 %   语言：Ruby
 % }
 
-\section{科研经历}
-\cventry{2015.04--2017.10}{\mdseries NFV的一致性更新（一作）}{清华大学未来网络与通信实验室}{}{}{
-  研究SDN环境中NFV的快速一致迁移问题。改进后的算法相比现有算法在性能提升 3 倍。\\
-  W. Wang, Y. Liu, Y. Li, H. Song, Y. Wang and J. Yuan, \textit{Consistent State
-    Updates for Virtualized Network Function Migration}, in IEEE Transactions on
-  Services Computing, vol. PP, no. 99, pp. 1-1. \\
-  语言：Java，C，Shell
+\cventry{2015.04--2017.10}{\mdseries NFV的一致性更新}{}{}{}{
+  \begin{itemize}
+  \item 研究SDN环境中NFV的快速一致迁移问题，相比现有算法性能提升 3 倍
+  \item 该项目成果形成一篇论文（一作，IEEE Transactions on Services Computing）
+  \end{itemize}
+  语言：Java，C
 }
 
 %\vspace{0.3cm}
